@@ -54,7 +54,7 @@ How was lunch? Did you eat well?
 
 ### List
 
-> Lists are a versatile way to store ordered, diverse data for access later. Using a list is much more readable, and generalizable than using a separate variable for each element. Elements can be accessed by their position in the list.
+> Lists are a versatile way to store ordered, diverse data for access later. Using a list is much more readable, and generalizable than using a separate variable for each element. Single elements can be accessed by their position in the list, or multiple items can be selected with a slice.
 
 ```python
 >>> a = []
@@ -65,6 +65,8 @@ How was lunch? Did you eat well?
 [1, 2, "Lunch", 3.5, 8]
 >>> b[1]
 2
+>>> b[1:3]
+[2, "lunch"]
 ```
 
 ### Dictionary
