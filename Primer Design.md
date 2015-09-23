@@ -59,7 +59,7 @@ We can then access the elements using a slice on the string, as was shown for th
 ```python
 >>> sequence_length = len(sequence)
 >>>
->>> for start in range(sequence_length):
+>>> for start in range(sequence_length - primer_length + 1):
 ...    target = sequence[start: primer_length + start]
 ```
 
@@ -77,7 +77,7 @@ We can then access the elements using a slice on the string, as was shown for th
 >>>
 >>> dna_to_rna = {'a': 'u', 't': 'a', 'c': 'g', 'g': 'c'}
 >>>
->>> for start in range(sequence_length):
+>>> for start in range(sequence_length - primer_length + 1):
 ...     target = sequence[start: primer_length + start]
 ...     primer = ''
 ...     for dna_letter in target:
