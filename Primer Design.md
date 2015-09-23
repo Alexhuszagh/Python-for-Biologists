@@ -74,7 +74,7 @@ We can then access the elements using a slice on the string, as was shown for th
 ...     primer = ''
 ...     for dna_letter in target:
 ...         rna_letter = dna_to_rna[dna_letter]
-...         primer += dna_to_rna
+...         primer += rna_letter
 ```
 
 ## Step 5
