@@ -67,7 +67,7 @@ We can then access the elements using a slice on the string, as was shown for th
 >>> primer_length = 20
 >>> sequence_length = len(sequence)
 >>>
->>> dna_to_rna = {'A': 'U', 'T': 'A', 'C': 'G', 'G': 'C'}
+>>> dna_to_rna = {'a': 'u', 't': 'a', 'c': 'g', 'g': 'c'}
 >>>
 >>> for start in range(sequence_length):
 ...     target = sequence[start: primer_length + start]
@@ -91,18 +91,51 @@ We can then access the elements using a slice on the string, as was shown for th
 >>> primer_length = 20
 >>> sequence_length = len(sequence)
 >>>
->>> dna_to_rna = {'A': 'U', 'T': 'A', 'C': 'G', 'G': 'C'}
+>>> dna_to_rna = {'a': 'u', 't': 'a', 'c': 'g', 'g': 'c'}
 >>> min_temp = 52
->>> max_temp = 58
+>>> max_temp = 65
 >>>
->>> for start in range(sequence_length):
+>>> for start in range(sequence_length - primer_length):
 ...     target = sequence[start: primer_length + start]
 ...     primer = ''
 ...     for dna_letter in target:
 ...         rna_letter = dna_to_rna[dna_letter]
-...         primer += dna_to_rna
+...         primer += rna_letter
 ...
 ...     temperature = mt.Tm_staluc(primer)
 ...     if min_temp < temperature < max_temp:
 ...         print(primer)
+gggccuucgcuugcagcggc
+ggccuucgcuugcagcggcg
+gccuucgcuugcagcggcgc
+ccuucgcuugcagcggcgcc
+cuucgcuugcagcggcgccg
+uucgcuugcagcggcgccgc
+gcgccgcggcccccaccuuc
+cgccgcggcccccaccuucu
+gccgcggcccccaccuucua
+ccgcggcccccaccuucuac
+cgcggcccccaccuucuacg
+gcggcccccaccuucuacgg
+cggcccccaccuucuacggc
+ggcccccaccuucuacggcg
+gcccccaccuucuacggcga
+accuucuacggcgacggcca
+uucuacggcgacggccaagu
+cuacggcgacggccaagucc
+uacggcgacggccaagucca
+acggcgacggccaaguccac
+cggcgacggccaaguccaca
+ggcgacggccaaguccacaa
+gcgacggccaaguccacaaa
+uccaucccgaaccaccgacg
+ccaucccgaaccaccgacgc
+caucccgaaccaccgacgcg
+aucccgaaccaccgacgcga
+ucccgaaccaccgacgcgag
+cccgaaccaccgacgcgagc
+ccgaaccaccgacgcgagcg
+cgaaccaccgacgcgagcgg
+gaaccaccgacgcgagcggc
+aaccaccgacgcgagcggcg
 ```
