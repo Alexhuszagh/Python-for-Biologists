@@ -7,8 +7,8 @@
     * Text
         * Strings of characters, or str
     * Collections
-        * Ordered sequences, or list
-        * Key-value pairs, or dict
+        * Ordered collections, or list
+        * Key-value collection pairs, or dict
 
 ## Numbers
 
