@@ -66,8 +66,10 @@ We can then access the elements using a slice on the string, as was shown for th
 ## Step 4
 
 **What collection type should we use to translate a target sequence to a primer?**
-- List
-- Dictionary
+<ol type="A">
+  <li>List</li>
+  <li>Dictionary</li>
+</ol>
 
 ```python
 >>> primer_length = 20
