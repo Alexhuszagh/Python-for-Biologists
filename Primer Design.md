@@ -18,10 +18,12 @@ cccggaagcgaacgtcgc...
 ## Step 1
 
 **Which data type is best suited to represent the gene sequence?**
-- Int
-- Float
-- String
-- Dictionary
+<ol type="A">
+  <li>Int</li>
+  <li>Float</li>
+  <li>String</li>
+  <li>Dictionary</li>
+</ol>
 
 
 ```python
