@@ -11,6 +11,7 @@ cccggaagcgaacgtcgc...
 2. Grab subset of sequence of primer length
 3. Use loops to repeatedly grab sequence subset at a different starting point
 4. Translate sequence to complement
+5. Libraries: Free Work
 
 ## Step 1
 
@@ -30,6 +31,7 @@ cccggaagcgaacgtcgc...
 We can then access the elements using a slice on the string, as was shown for the list.
 
 ```python
+>>> sequence = "cccggaagcgaacgtcgccgcggcgccgggggtggaagatgccgctgccggttcaggtgtttaacttgcaggtagggcttggtggctgcgctcgccgcgt"
 >>> primer_length = 20
 >>> sequence[0: primer_length]
 'cccggaagcgaacgtcgccg'
@@ -62,8 +64,45 @@ We can then access the elements using a slice on the string, as was shown for th
 - Dictionary
 
 ```python
+>>> primer_length = 20
 >>> sequence_length = len(sequence)
+>>>
+>>> dna_to_rna = {'A': 'U', 'T': 'A', 'C': 'G', 'G': 'C'}
 >>>
 >>> for start in range(sequence_length):
 ...     target = sequence[start: primer_length + start]
+...     primer = ''
+...     for dna_letter in target:
+...         rna_letter = dna_to_rna[dna_letter]
+...         primer += dna_to_rna
+```
+
+## Step 5
+
+* Libraries are packaged code which provide you with tools to simplify your own work.
+* Good langauges have good libraries to simplify your life
+
+**Using a library to calculate melting temperature**
+
+```python
+>>> from Bio.SeqUtils import MeltingTemp as mt
+>>>
+>>> sequence = "cccggaagcgaacgtcgccgcggcgccgggggtggaagatgccgctgccggttcaggtgtttaacttgcaggtagggcttggtggctgcgctcgccgcgt"
+>>> primer_length = 20
+>>> sequence_length = len(sequence)
+>>>
+>>> dna_to_rna = {'A': 'U', 'T': 'A', 'C': 'G', 'G': 'C'}
+>>> min_temp = 52
+>>> max_temp = 58
+>>>
+>>> for start in range(sequence_length):
+...     target = sequence[start: primer_length + start]
+...     primer = ''
+...     for dna_letter in target:
+...         rna_letter = dna_to_rna[dna_letter]
+...         primer += dna_to_rna
+...
+...     temperature = mt.Tm_staluc(primer)
+...     if min_temp < temperature < max_temp:
+...         print(primer)
 ```
