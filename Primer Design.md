@@ -51,8 +51,10 @@ We can then access the elements using a slice on the string, as was shown for th
 ## Step 3
 
 **Which type of loop should we use to changing the starting point?**
-- While Loop
-- For Loop
+<ol type="A">
+  <li>While Loop</li>
+  <li>For Loop</li>
+</ol>
 
 ```python
 >>> sequence_length = len(sequence)
