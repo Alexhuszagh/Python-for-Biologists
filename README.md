@@ -1,6 +1,12 @@
 # Python for Biologists
 Introduction to Python for Biologists
 
+## Stated Learning Objectives
+
+* You will learn basic Python types and how to use them
+* You will understand simple Python syntax
+* You will know how Python can automate repetitive tasks for biology
+
 ## Table of Contents
 
 **Information Sheets**
