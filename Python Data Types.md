@@ -1,4 +1,4 @@
-# Python Objects
+# Python Data Types
 
 * Python has numerous data types, including:
     * Numbers
