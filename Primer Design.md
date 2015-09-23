@@ -95,7 +95,7 @@ We can then access the elements using a slice on the string, as was shown for th
 >>> min_temp = 52
 >>> max_temp = 65
 >>>
->>> for start in range(sequence_length - primer_length):
+>>> for start in range(sequence_length - primer_length + 1):
 ...     target = sequence[start: primer_length + start]
 ...     primer = ''
 ...     for dna_letter in target:
