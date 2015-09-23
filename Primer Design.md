@@ -17,8 +17,11 @@ cccggaagcgaacgtcgc...
 **Which data type is best suited to represent the gene sequence**
 
 A. Int
+
 B. Float
+
 C. String
+
 D. Dictionary
 
 

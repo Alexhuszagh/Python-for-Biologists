@@ -48,9 +48,9 @@
 
 ## Loops of predetermined length
 
-* Executes code for each item in a given sequence
-* Can make sequences based on the length of a sequence
-* Strings act like sequences too, can be part of a for loop
+* Executes code for each item in a given collection
+* Can make collections based on the length of a collection
+* Strings act like ordered collections too, can be part of a for loop
 
 ```python
 >>> numbers = [1, 3, 2, 4]
