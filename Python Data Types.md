@@ -71,7 +71,7 @@ How was lunch? Did you eat well?
 
 ### Dictionary
 
-> Dictionaries, or dict, are key-to-value pairs, like a treasure chest with only a given treasure for each key.
+> Dictionaries, or dict, are key-to-value pairs, like a dictionary or translation guide book, with one value for each key.
 
 ```python
 >>> a = {}

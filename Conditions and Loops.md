@@ -54,7 +54,7 @@
 
 ```python
 >>> numbers = [1, 3, 2, 4]
->>> for value in range(number):
+>>> for value in number:
 ...     print(value)
 1
 3
